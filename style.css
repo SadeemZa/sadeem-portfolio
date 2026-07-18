@@ -1,0 +1,373 @@
+/* الخطوط والألوان الأساسية */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=DM+Mono&display=swap');
+
+:root {
+  background: #11110f;
+  color: #f5f2ed;
+  font-family: Alexandria, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header,
+main,
+footer {
+  width: min(1120px, calc(100% - 48px));
+  margin: auto;
+}
+
+/* الشريط العلوي */
+header {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  direction: ltr;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.logo span,
+em,
+.label {
+  color: #d7ff64;
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+  color: #aaa8a0;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: #d7ff64;
+}
+
+/* أول جزء في الموقع */
+.hero {
+  min-height: 645px;
+  padding-top: 112px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.label {
+  font-family: 'DM Mono', monospace;
+  font-size: 17px;
+  letter-spacing: 0.05em;
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 3;
+  margin: 20px 0 26px;
+  font-size: clamp(42px, 7vw, 88px);
+  line-height: 1.17;
+  letter-spacing: -5px;
+}
+
+.intro,
+section > p:not(.label) {
+  max-width: 500px;
+  color: #b2b0aa;
+  font-size: 16px;
+  line-height: 2;
+  position: relative;
+  z-index: 3;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 16px 23px;
+  border-radius: 99px;
+  background: #d7ff64;
+  color: #11110f;
+  font-size: 13px;
+  font-weight: 700;
+  position: relative;
+  z-index: 3;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+/* الدوائر الخلفية */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+  z-index: 1;
+}
+
+.orb-one {
+  width: 430px;
+  height: 430px;
+  top: 110px;
+  left: 120px;
+  background: radial-gradient(circle at 30% 30%, #e6ff94, #a2c952 10%, #3a5021 72%);
+  opacity: 0.75;
+  z-index: 0;
+}
+
+.orb-two {
+  width: 120px;
+  height: 120px;
+  top: 470px;
+  left: 35%;
+  background: #556a2e;
+}
+
+/* الأقسام: عني وتواصل */
+section {
+  padding: 110px 0;
+  border-top: 1px solid #30302c;
+}
+
+#about,
+#contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: clamp(31px, 4vw, 55px);
+  line-height: 1.35;
+  letter-spacing: -2px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.skills span {
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(215,255,100,.12);
+    border: 1px solid rgba(215,255,100,.25);
+    color: var(--accent);
+}
+
+/* قسم المشاريع */
+#projects .label {
+  display: block;
+  margin-bottom: 55px;
+}
+
+#projects h2 {
+  margin-bottom: 55px;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 80px 1fr 30px;
+  gap: 20px;
+  align-items: center;
+  padding: 29px 4px;
+  border-top: 1px solid #30302c;
+  transition: 0.2s;
+}
+
+article:last-child {
+  border-bottom: 1px solid #30302c;
+}
+
+article:hover {
+  padding-right: 14px;
+  background: #181816;
+}
+
+article b {
+  color: #d7ff64;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+}
+
+h3 {
+  margin: 0 0 7px;
+  font-size: 20px;
+}
+
+article p {
+  margin: 0;
+  color: #aaa8a0;
+  font-size: 13px;
+}
+
+.arrow {
+  color: #d7ff64;
+  font-size: 21px;
+}
+
+/* الإيميل والنهاية */
+.email {
+  display: block;
+  width: fit-content;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #d7ff64;
+  color: #d7ff64;
+  font-size: clamp(17px, 2vw, 24px);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0 35px;
+  border-top: 1px solid #30302c;
+  color: #74736e;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+}
+.status {
+  margin-top: 18px;
+  margin-bottom: 30px;
+  color: #9f9f99;
+  font-size: 14px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: #d7ff64;
+  border-bottom: 1px solid #d7ff64;
+  padding-bottom: 4px;
+  transition: .2s;
+}
+
+.contact-links a:hover {
+  opacity: .7;
+}
+
+/* =========================
+   THAMAR PAGE
+========================= */
+
+.thamar-hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.thamar-hero h1{
+    font-size: clamp(90px, 12vw, 150px);
+    line-height: .9;
+    letter-spacing: -6px;
+    margin: 20px 0 30px;
+    font-weight: 700;
+}
+
+.thamar-hero .intro{
+    max-width: 600px;
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.thamar-hero .button{
+    margin-top: 40px;
+}
+
+/* شكل الموقع على الجوال */
+@media (max-width: 650px) {
+  header,
+  main,
+  footer {
+    width: min(100% - 34px, 1120px);
+  }
+
+  nav {
+    gap: 15px;
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 600px;
+    padding-top: 85px;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .orb-one {
+    width: 280px;
+    height: 280px;
+    top: 330px;
+    left: -30px;
+    opacity: 0.45;
+  }
+
+  .orb-two {
+    display: none;
+  }
+
+  #about,
+  #contact {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 75px 0;
+  }
+
+  #projects {
+    padding: 75px 0;
+  }
+
+  article {
+    grid-template-columns: 42px 1fr 20px;
+    gap: 10px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  article p {
+    line-height: 1.7;
+  }
+
+  footer {
+    font-size: 9px;
+  }
+}
+

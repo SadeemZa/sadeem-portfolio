@@ -1,0 +1,300 @@
+thamar.css
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=DM+Mono&display=swap');
+
+:root{
+    --bg:#11110f;
+    --text:#f5f2ed;
+    --muted:#a9a8a2;
+    --line:#2a2a28;
+    --accent:#d7ff64;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Alexandria,sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+header{
+
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:min(1120px,calc(100% - 48px));
+    height:90px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:100;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--accent);
+}
+
+nav a{
+    color:#ddd;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+/* ================= HERO ================= */
+
+.thamar-hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("farm.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-overlay{
+
+    width:min(1120px,calc(100% - 48px));
+
+    margin:auto;
+}
+
+.label{
+
+    color:var(--accent);
+
+    font-family:"DM Mono",monospace;
+
+    letter-spacing:.08em;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+}
+
+h1{
+
+    font-size:clamp(70px,10vw,120px);
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+    letter-spacing:-4px;
+}
+
+.intro{
+
+    max-width:620px;
+
+    color:#ddd;
+
+    font-size:20px;
+
+    line-height:1.8;
+}
+
+.button{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:16px 28px;
+
+    border-radius:999px;
+
+    background:var(--accent);
+
+    color:#111;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ================= SECTIONS ================= */
+
+main section{
+
+    width:min(1120px,calc(100% - 48px));
+
+    margin:auto;
+
+    padding:120px 0;
+
+    border-top:1px solid var(--line);
+}
+
+h2{
+
+    margin:18px 0 30px;
+
+    font-size:clamp(34px,5vw,58px);
+
+    line-height:1.2;
+}
+
+section p{
+
+    max-width:760px;
+
+    color:var(--muted);
+
+    line-height:2;
+
+    font-size:17px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:35px;
+}
+
+.skills span{
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:rgba(215,255,100,.08);
+
+    border:1px solid rgba(215,255,100,.18);
+
+    color:var(--accent);
+
+    transition:.25s;
+}
+
+.skills span:hover{
+
+    background:var(--accent);
+
+    color:#111;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    width:min(1120px,calc(100% - 48px));
+
+    margin:auto;
+
+    padding:40px 0;
+
+    border-top:1px solid var(--line);
+
+    color:#777;
+
+    font-size:13px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+header{
+
+    width:calc(100% - 34px);
+
+}
+
+.hero-overlay{
+
+    width:calc(100% - 34px);
+
+}
+
+.thamar-hero{
+
+    background-position:center;
+
+}
+
+h1{
+
+    font-size:58px;
+
+}
+
+.intro{
+
+    font-size:17px;
+
+}
+
+main section{
+
+    width:calc(100% - 34px);
+
+    padding:80px 0;
+
+}
+
+h2{
+
+    font-size:36px;
+
+}
+
+section p{
+
+    font-size:15px;
+
+}
+
+.skills{
+
+    gap:10px;
+
+}
+
+}
