@@ -308,6 +308,7 @@ footer {
     margin-top: 40px;
 }
 
+
 /* شكل الموقع على الجوال */
 @media (max-width: 650px) {
   header,
@@ -368,6 +369,24 @@ footer {
 
   footer {
     font-size: 9px;
-  }
+  }ـ
+}
+.coming-soon {
+    margin-top: 3rem;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    text-align: center;
 }
 
+.coming-soon h3 {
+    color: #d8ff4d;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.coming-soon p {
+    color: #a0a0a0;
+    font-size: 1rem;
+}
